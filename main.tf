@@ -44,3 +44,5 @@ module "sqs_configure" {
   sqs_queue_name  = module.sqs.sqs_queue_name
   sqs_queue_id    = module.sqs.sqs_queue_id
 }
+
+#test
