@@ -1,3 +1,12 @@
+module "rds" {
+  source        = "./modules/rds"
+  vpc_id        = module.vpc.vpc_id             # references vpc output
+  db_subnet_ids = module.vpc.private_subnet_ids # references vpc output
+}
+
+# currently no proxy - does lambda need this or is connection pool enough?
+# look into backups (is this automatic?)
+
 resource "aws_db_subnet_group" "flytrap_db_subnet_group" {
   name       = "flytrap-db-subnet-group"
   subnet_ids = var.db_subnet_ids # the vpc's two private subnet ids; passed in via module block
