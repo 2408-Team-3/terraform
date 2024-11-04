@@ -16,3 +16,6 @@ crash.log
 modules/lambda
 
 .DS_Store
+
+#git mob co-authors
+.git-coauthors
