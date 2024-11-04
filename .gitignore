@@ -14,3 +14,5 @@ crash.log
 
 # WIP lambda files
 modules/lambda
+
+.DS_Store
