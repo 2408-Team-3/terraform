@@ -1,3 +1,6 @@
+# currently no proxy - does lambda need this or is connection pool enough?
+# look into backups (is this automatic?)
+
 resource "aws_db_subnet_group" "flytrap_db_subnet_group" {
   name       = "flytrap-db-subnet-group"
   subnet_ids = var.db_subnet_ids # the vpc's two private subnet ids; passed in via module block
